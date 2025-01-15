@@ -1,15 +1,16 @@
-import { Router } from 'express';
+import { Router } from "express";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
 import {
-    getChannelStats,
-    getChannelVideos,
-} from "../controllers/dashboard.controller.js"
-import {verifyJWT} from "../middlewares/auth.middleware.js"
+  getChannelStats,
+  getChannelVideos,
+} from "../controllers/dashboard.controller.js";
 
 const router = Router();
+router.use(verifyJWT);
 
-router.use(verifyJWT); // Apply verifyJWT middleware to all routes in this file
+// http://localhost:3000/api/v1/dashboard/...
 
-router.route("/stats").get(getChannelStats);
+router.route("/states").get(getChannelStats);
 router.route("/videos").get(getChannelVideos);
 
-export default router
+export default router;
