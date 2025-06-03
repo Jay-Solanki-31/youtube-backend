@@ -1,7 +1,7 @@
 {
   "name": "youtube-backend",
   "version": "1.0.0",
-  "description": "a backend at chai aur code channel - youtube",
+  "description": "a backend at- youtube",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "backend",
     "chai"
   ],
-  "author": "Hitesh Choudhary",
+  "author": "jay",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1",
